@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Sushil333/portfolio/issues"
   },
-  "homepage": "https://Sushil333.github.io/portfolio#readme",
+  "homepage": "https://github.com/Sushil333/portfolio#readme",
   "dependencies": {
     "gh-pages": "^2.0.1"
   }

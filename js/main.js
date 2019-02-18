@@ -30,9 +30,11 @@ window.addEventListener('DOMContentLoaded', function() {
         if (!isMobile) {
             if (pos >= navPos + nav.clientHeight && lastPos < pos) {
                 nav.classList.add('fixed');
+                logo.style.display = 'inline-block';
             }
             if (pos < navPos && lastPos > pos) {
                 nav.classList.remove('fixed');
+                logo.style.display = 'none';
             }
             lastPos = pos;
         }
