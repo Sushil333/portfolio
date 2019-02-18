@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+</head>
+<body>
+    <nav class="flex">
+        <div class="link-wrap">
+          <div class="page-link logo bold" id="logo">SBROCKS.</div>
+          <div class="active page-link" dest="home">home</div>
+          <div class="page-link" dest="about">about</div>
+          <div class="page-link" dest="portfolio">projects</div>
+          <div class="page-link" dest="contact">contact</div>
+        </div>
+        <div class="btn-menu">
+            <div class="line-bar"></div>
+            <div class="line-bar"></div>
+            <div class="line-bar"></div>
+        </div>
+    </nav>
+
+    <section id="home" class="flex section">
+        <div class="text">
+            Hello, I'm <span class="highlight">Sushil Bhardwaj</span>.
+            <br>
+            I'm a full-stack web developer.
+          </div>
+        <button class="btn">View More </button>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container flex">
+            <div class="header waypoint" data-animation="slide-in-left">ABOUT</div>
+            <div class="header-bar waypoint" data-animation="slide-in-left" data-delay=".5s"></div>
+
+              <div class="skills-wrapper flex row-gt-sm">
+        <div class="flex flex-50-gt-sm waypoint" data-animation="slide-in-left">
+          <img src="img/me.png" class="me">
+          <!-- <div><img class="up-arrow" src="img/up-arrow.png"></div> -->
+          <div class="label bold">Who's this guy?</div>
+          <div>
+            I'm the Front-End Developer for <a class="highlight" href="http://www.eyecuelab.com" target="_blank">EyeCue Lab</a> in Portland, OR.
+            <br>
+            I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+            <br>
+            <span class="page-link highlight" dest="contact">Let's make something special.</span>
+          </div>
+        </div>
+
+        <div class="flex flex-50-gt-sm waypoint bars-wrap"  data-animation="slide-in-right">
+          <div class="bar flex">
+            <div class="bar fill" style="width:75%">
+              <div class="tag bold flex">CSS</div>
+            </div>
+            <span>80%</span>
+          </div>
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:85%">
+              <div class="tag bold flex">HTML</div>
+            </div>
+            <span>90%</span>
+          </div>
+
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:65%">
+              <div class="tag bold flex">React</div>
+            </div>
+            <span>70%</span>
+          </div>
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:80%">
+              <div class="tag bold flex">JavaScript</div>
+            </div>
+            <span>80%</span>
+          </div>
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:65%">
+              <div class="tag bold flex">Angular</div>
+            </div>
+            <span>70%</span>
+          </div>
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:55%">
+              <div class="tag bold flex">Node.js</div>
+            </div>
+            <span>50%</span>
+          </div>
+
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:65%">
+              <div class="tag bold flex">Ruby/Rails</div>
+            </div>
+            <span>70%</span>
+          </div>
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:55%">
+              <div class="tag bold flex">UI Design</div>
+            </div>
+            <span>50%</span>
+          </div>
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:60%">
+              <div class="tag bold flex">Photoshop</div>
+            </div>
+            <span>60%</span>
+          </div>
+
+          <div class="bar flex">
+            <div class="bar fill" style="width:45%">
+              <div class="tag bold flex">Illustrator</div>
+            </div>
+            <span>40%</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+        <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+      </svg>
+      <div class="container flex">
+        <div class="header waypoint" data-animation="slide-in-left">CONTACT</div>
+        <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s"></div>
+        <div class="highlight waypoint" data-animation="slide-in-right" data-delay=".5s">Have a question or want to work together?</div>
+        <form class="waypoint" data-animation="pop-in" data-delay=".5s" id="contact-form">
+          <input placeholder="Name" type="text" name="name" required>
+          <input placeholder="Enter email" type="email" name="email" required>
+          <textarea placeholder="Your Message" type="text" name="message"></textarea>
+          <div id="success">
+            <div>Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span></div>
+          </div>
+          <input class="btn" type="submit" id="submit" value=SUBMIT>
+        </form>
+      </div>
+    </section>
+  
+    <footer>
+      <i class="fas fa-angle-double-up mdi mdi-chevron-double-up page-link" dest="home" style="font-size: 2rem;"></i>
+  
+      <div class="icon-wrap flex row">
+        <a href="https://www.linkedin.com/in/mattwilliams85">
+          <div class="flex icon" id="icon-2">
+            <i class="fab fa-linkedin"></i>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/matthew.williams.351">
+          <div class="flex icon" id="icon-3">
+            <i class="fab fa-facebook"></i>
+          </div>
+        </a>
+        <a href="https://instagram.com/infinite_edge/">
+          <div class="flex icon" id="icon-4">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a href="http://codepen.io/matthewwilliams/">
+          <div class="flex icon" id="icon-5">
+            <i class="fab fa-codepen"></i>
+          </div>
+        </a>
+      </div>
+      <div class="info-box">
+        <div class="footnote">SUSHIL BHARDWAJ <span class="highlight">&copy;2019</span></div>
+      </div>
+    </footer>
+  
+    <script src="js/main.js"></script>
+</body>
+</html>
