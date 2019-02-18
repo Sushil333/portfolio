@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sushil333/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sushil333/portfolio/issues"
+  },
+  "homepage": "https://github.com/Sushil333/portfolio#readme",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
