@@ -219,4 +219,4 @@ function fixedNav() {
         nav.classList.add('desk');
         //logo.style.display = 'none';
     }
-}
+}*/
