@@ -4,7 +4,7 @@ const logo = document.querySelector('.logo');
 const home = document.querySelector('#home');
 const about = document.querySelector('#about');
 const contact = document.querySelector('#contact');
-
+const form = document.querySelector('#contact-form');
 
 window.addEventListener('DOMContentLoaded', function() {
     var isMobile;
@@ -179,3 +179,43 @@ menuButton.addEventListener('click', function() {
     
     window.addEventListener('scroll', fixedNav);
     */
+
+// Success and Error functions for after the form is submitted
+    
+function success() {
+    document.getElementById('success').classList.add('expand');
+    form.reset();
+  }
+
+  function error() {
+    status.innerHTML = "Oops! There was a problem.";
+  }
+
+  // handle the form submission event
+
+  form.addEventListener("submit", function(ev) {
+    ev.preventDefault();
+    var data = new FormData(form);
+    ajax(form.method, form.action, data, success, error);
+    document.querySelector('#close').addEventListener('click', function() {
+        document.querySelector('#success').classList.remove('expand');
+    });
+  });
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, data, success, error) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(method, url);
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      success(xhr.response, xhr.responseType);
+    } else {
+      error(xhr.status, xhr.response, xhr.responseType);
+    }
+  };
+  xhr.send(data);
+}
