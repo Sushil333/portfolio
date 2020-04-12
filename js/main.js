@@ -137,7 +137,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     window.addEventListener('scroll', fixedNav);
-* /
+
 
     // Success and Error functions for after the form is submitted
 
