@@ -136,8 +136,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    window.addEventListener('scroll', fixedNav);
-
 
     // Success and Error functions for after the form is submitted
 
@@ -183,42 +181,4 @@ window.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.btn-menu').classList.toggle('close');
     });
 
-    var mq = window.matchMedia('@media scree and (min-width: 600px)');
-function fixedNav() {
-    if(window.scrollY+53 >= topOfNav) {
-        nav.classList.add('fixed');
-        nav.classList.add('desk');
-        //if(mq.matches) {logo.style.display = 'inline-block';}
-        logo.style.display = 'inline-block';
-        document.querySelector('.bars-wrap').classList.add('animated');
-    } else {
-        nav.classList.remove('fixed');
-        nav.classList.add('desk');
-        //logo.style.display = 'none';
-    }
-}
 });
-
-/*
-var section = document.querySelectorAll(".section");
-var sections = {};
-  var i = 0;
-
-  Array.prototype.forEach.call(section, function(e) {
-      sections[e.id] = e.offsetTop;
-  });
-
-
-  window.onscroll = function() {
-      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-    for (i in sections) {
-        if (sections[i] <= scrollPosition) {
-            document.querySelector('.active').setAttribute('class', ' ');
-        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-      }
-    }
-  };
-*/
-
-/* */
